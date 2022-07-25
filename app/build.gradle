@@ -82,7 +82,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-
+    //Content resolver
+    //implementation 'com.github.ologe:android-content-resolver-SQL:1.2.2'
 
 
 

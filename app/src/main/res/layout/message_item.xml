@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="model"
+            type="com.geekydroid.spamfilter.Message" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+    <TextView
+        android:id="@+id/_idLabel"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="_id - " />
+
+    <TextView
+        android:id="@+id/_id"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{model._id}"
+        android:layout_toEndOf="@+id/_idLabel" />
+
+    <TextView
+        android:id="@+id/thread_idLabel"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_id"
+        android:text="thread_id - " />
+
+    <TextView
+        android:id="@+id/thread_id"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_id"
+        android:text="@{model.thread_id}"
+        android:layout_toEndOf="@+id/thread_idLabel" />
+
+    <TextView
+        android:id="@+id/addressLabel"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thread_idLabel"
+        android:text="Address - " />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thread_idLabel"
+        android:text="@{model.address}"
+        android:layout_toEndOf="@+id/addressLabel" />
+
+        <TextView
+            android:id="@+id/personLabel"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addressLabel"
+            android:text="Person - " />
+
+    <TextView
+        android:id="@+id/person"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addressLabel"
+        android:text="@{String.valueOf(model.person)}"
+        android:layout_toEndOf="@+id/personLabel" />
+
+    <TextView
+        android:id="@+id/subjectLabel"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personLabel"
+        android:text="Subject - " />
+
+    <TextView
+        android:id="@+id/subject"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personLabel"
+        android:text="@{model.subject}"
+        android:layout_toEndOf="@+id/subjectLabel" />
+
+
+        <TextView
+            android:id="@+id/phone_idLabel"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subjectLabel"
+            android:text="phone_id - " />
+
+    <TextView
+        android:id="@+id/phone_id"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subjectLabel"
+        android:text="@{model.phoneId}"
+        android:layout_toEndOf="@+id/phone_idLabel" />
+
+        <TextView
+            android:id="@+id/bodyLabel"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_idLabel"
+            android:text="Body - " />
+
+        <TextView
+            android:id="@+id/body"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_idLabel"
+            android:text="@{model.body}"
+            android:layout_toEndOf="@+id/bodyLabel" />
+    </RelativeLayout>
+</layout>
